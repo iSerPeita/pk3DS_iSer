@@ -19,6 +19,13 @@ public partial class ItemEditor6 : Form
     }
 
     private readonly byte[][] files;
+    private static readonly int[] BattleBlockedItemIds = // Guarda los identificadores que procesa el botón de bloqueo.
+    [ 
+        .. Enumerable.Range(17, 21), // Incluye todos los identificadores desde el 17 hasta el 37.
+        42, 43, 44, 54, 65, 66, 67, 134, 591, 708, // Incluye los identificadores aislados de tu lista.
+        .. Enumerable.Range(149, 64), // Incluye todas las bayas con identificadores desde el 149 hasta el 212.
+        686, 687, 688, // Incluye las tres bayas adicionales de tu lista.
+    ]; 
     private readonly string[] itemlist = Main.Config.GetText(TextName.ItemNames);
     private readonly string[] itemflavor = Main.Config.GetText(TextName.ItemFlavor);
 
@@ -26,6 +33,7 @@ public partial class ItemEditor6 : Form
     {
         CB_Item.Items.AddRange(itemlist);
         CB_Item.SelectedIndex = 1;
+        B_BanBattleItems.Enabled = Main.Config.ORAS; // Activa el botón cuando el juego cargado pertenece a ORAS.
     }
 
     private int entry = -1;
@@ -56,6 +64,11 @@ public partial class ItemEditor6 : Form
     {
         SetEntry();
     }
+
+    private void B_BanBattleItems_Click(object sender, EventArgs e) // Atiende la pulsación del botón.
+    { // Mantiene visible el estado del botón hasta disponer de un método que funcione en el juego.
+        WinFormsUtil.Alert("Bloqueo pendiente: cambiar los datos de los objetos no impide usarlos en combate en ORAS."); // Explica el resultado de la prueba sin modificar ningún objeto.
+    } // Termina la acción sin guardar cambios engañosos.
 
     public static int GetItemMapOffset()
     {

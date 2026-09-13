@@ -94,7 +94,7 @@ public struct Item
     public int PocketField { readonly get => (Packed >> 7) & 0xF; set => Packed = (ushort)((Packed & 0xF87F) | ((value & 0xF) << 7)); }
 
     [Category(Battle)]
-    public BattlePocket PocketBattle { readonly get => (BattlePocket)(Packed >> 11); set => Packed = (ushort)((Packed & 0x077F) | (((byte)value & 0x1F) << 11)); }
+    public BattlePocket PocketBattle { readonly get => (BattlePocket)(Packed >> 11); set => Packed = (ushort)((Packed & 0x07FF) | (((byte)value & 0x1F) << 11)); } // Conserva todos los bits del bolsillo normal al cambiar el bolsillo de combate.
 
     [Category(Field)]
     public bool Revive { readonly get => ((Boost0 >> 0) & 1) == 0; set => Boost0 = (byte)((Boost0 & ~(1 << 0)) | ((value ? 1 : 0) << 0)); }
