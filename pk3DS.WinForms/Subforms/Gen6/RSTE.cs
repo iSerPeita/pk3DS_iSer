@@ -28,6 +28,7 @@ public partial class RSTE : Form
         rFinalEvo = Legal.FinalEvolutions_6;
 
         InitializeComponent();
+        B_ChetarRival.Enabled = Main.Config.ORAS;
         // String Fetching
         #region Combo Box Arrays
         trpk_pkm = [CB_Pokemon_1_Pokemon, CB_Pokemon_2_Pokemon, CB_Pokemon_3_Pokemon, CB_Pokemon_4_Pokemon, CB_Pokemon_5_Pokemon, CB_Pokemon_6_Pokemon,

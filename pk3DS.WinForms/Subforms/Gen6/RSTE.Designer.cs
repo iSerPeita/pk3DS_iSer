@@ -195,6 +195,7 @@ partial class RSTE
         this.L_Pokemon_6_Pokemon = new System.Windows.Forms.Label();
         this.CB_Pokemon_6_Pokemon = new System.Windows.Forms.ComboBox();
         this.B_MejorarEntrenadores = new System.Windows.Forms.Button();//boton de x2 IV, bayas Zidra...
+        this.B_ChetarRival = new System.Windows.Forms.Button();
         this.B_Randomize = new System.Windows.Forms.Button();
         this.TB_Text1 = new System.Windows.Forms.TextBox();
         this.L_Text1 = new System.Windows.Forms.Label();
@@ -225,7 +226,7 @@ partial class RSTE
         //
         // B_Dump
         //
-        this.B_Dump.Location = new System.Drawing.Point(483, 4);
+        this.B_Dump.Location = new System.Drawing.Point(535, 4);
         this.B_Dump.Name = "B_Dump";
         this.B_Dump.Size = new System.Drawing.Size(93, 23);
         this.B_Dump.TabIndex = 67;
@@ -2080,15 +2081,25 @@ partial class RSTE
         this.B_MejorarEntrenadores.Enabled = true;
         this.B_MejorarEntrenadores.Location = new System.Drawing.Point(216, 4);
         this.B_MejorarEntrenadores.Name = "B_MejorarEntrenadores";
-        this.B_MejorarEntrenadores.Size = new System.Drawing.Size(162, 23);
+        this.B_MejorarEntrenadores.Size = new System.Drawing.Size(124, 23);
         this.B_MejorarEntrenadores.TabIndex = 70;
         this.B_MejorarEntrenadores.Text = "Mejorar entrenadores";
         this.B_MejorarEntrenadores.UseVisualStyleBackColor = true;
         this.B_MejorarEntrenadores.Click += new System.EventHandler(this.B_MejorarEntrenadores_Click);
         //
+        // B_ChetarRival
+        //
+        this.B_ChetarRival.Location = new System.Drawing.Point(346, 4);
+        this.B_ChetarRival.Name = "B_ChetarRival";
+        this.B_ChetarRival.Size = new System.Drawing.Size(84, 23);
+        this.B_ChetarRival.TabIndex = 71;
+        this.B_ChetarRival.Text = "Chetar Rival";
+        this.B_ChetarRival.UseVisualStyleBackColor = true;
+        this.B_ChetarRival.Click += new System.EventHandler(this.B_ChetarRival_Click);
+        //
         // B_Randomize
         //
-        this.B_Randomize.Location = new System.Drawing.Point(384, 4);
+        this.B_Randomize.Location = new System.Drawing.Point(436, 4);
         this.B_Randomize.Name = "B_Randomize";
         this.B_Randomize.Size = new System.Drawing.Size(93, 23);
         this.B_Randomize.TabIndex = 68;
@@ -2195,7 +2206,8 @@ partial class RSTE
         //
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(584, 256);
+        this.ClientSize = new System.Drawing.Size(636, 256);
+        this.Controls.Add(this.B_ChetarRival);
         this.Controls.Add(this.B_MejorarEntrenadores);
         this.Controls.Add(this.L_Text2);
         this.Controls.Add(this.TB_Text2);
@@ -2413,6 +2425,7 @@ partial class RSTE
     private System.Windows.Forms.Label L_Pokemon_6_Pokemon;
     private System.Windows.Forms.ComboBox CB_Pokemon_6_Pokemon;
     private System.Windows.Forms.Button B_MejorarEntrenadores;
+    private System.Windows.Forms.Button B_ChetarRival;
     private System.Windows.Forms.Button B_Randomize;
     private System.Windows.Forms.TextBox TB_Text1;
     private System.Windows.Forms.Label L_Text1;
